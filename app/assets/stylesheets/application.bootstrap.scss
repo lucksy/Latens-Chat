@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1200px
+);
+
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       "Liberation Mono", "Courier New", monospace !default;
+
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+
+body { margin: 0; padding: 0; min-height: 100vh; background: linear-gradient(#0D0D5B, #4E4E77); font-family: $font-family-sans-serif; }
+main { margin: 0; padding: 0; display: flex; flex-wrap: nowrap; height: 100vh;
+    max-height: 100vh; overflow-x: auto; overflow-y: hidden;
+}
+.main-container { width: 1200px;}
+.sidebar { background-color: #0F0F5C; color: #FFF; }
+header { background-color: #090947; }
+.main-body { margin: 50px 0 0 0; background: url(/assets/Backgr.png) top left; background-repeat: repeat-x;  }
+.massages {  overflow: auto; }
+.wrap {  }
+.send {
+	height: 170px;
+}
+.delay-box {
+	margin-top: 50px; color: #fff;
+	.delay-text { font-size: 12px;
+		strong { font-size: 16px; font-style: normal; font-weight: normal; display: block; 
+			em { font-size: 30px; font-style: normal; }
+		} 
+	}
+}
+
+.indicators-wrap { font-size: 12px; }
+.massages { color: #FFF; }
+
+.message { width: 80%; margin-left: auto; margin-right: 0;
+	.message-body { box-shadow: rgba(43, 43, 112, 1) 0px 10px 29px 0px; -webkit-border-bottom-right-radius: 10px;
+			-webkit-border-bottom-left-radius: 10px;
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+	}
+	.message-content {background-color: #FFF;
+		-webkit-border-top-left-radius: 10px;
+		-moz-border-radius-topleft: 10px;
+		border-top-left-radius: 10px;
+		-webkit-border-top-right-radius: 0;
+		-moz-border-radius-topright: 0;
+		border-top-right-radius: 0;
+	}
+
+	&.received-message { margin-left: 0; margin-right: auto;
+		.message-content {
+			background-color: #464782;
+			-webkit-border-top-left-radius: 0;
+			-moz-border-radius-topleft: 0;
+			border-top-left-radius: 0;
+			-webkit-border-top-right-radius: 10px;
+			-moz-border-radius-topright: 10px;
+			border-top-right-radius: 10px;
+		}
+	}
+	&.sent-message {
+		.message-content {
+			color: #000;
+		}
+		.me-2 {
+			margin-left: 0.5rem !important; margin-right: 0 !important;
+		}
+	}
+	.message-meta { padding: 0.5rem 1.5rem !important; background-color: #2B2C70; color: #B7BDCB; font-weight: 300; font-size: 12px;
+			-webkit-border-bottom-right-radius: 10px;
+			-webkit-border-bottom-left-radius: 10px;
+			-moz-border-radius-bottomright: 10px;
+			-moz-border-radius-bottomleft: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+	}
+}
+
+.send { width: 100%;
+	form { margin: 0 3rem !important; border-top: 1px solid #3F3F71; color: #FFF; position: relative;
+		.media { position: absolute; top: -32px; 
+			ul,li { margin: 0; padding: 0; list-style: none;
+				a { height: 32px; width: 40px; text-align: center;
+					display: block; background-color: #141566;
+					img { width: 16px; position: relative; top: 3px; }
+				}
+			}
+		} 
+		textarea { border: none; color: #FFF; margin-top: 1rem; 
+			&:focus, &:hover, &:focus { box-shadow: none !important;
+				background-color: transparent !important; color: #FFF; 
+			}
+		}
+		textarea::placeholder {
+			color: #FFF;
+		}
+		.submit-btn {
+			margin-top: 1rem;
+		    background:url(/assets/send.png) no-repeat;
+		    background-size: 40px;
+		    cursor:pointer;
+		    border:none;
+		    width:43px;
+		    height:40px;
+		}
+	}
+	.message-typing {
+		background-color: transparent; 
+	}
+	.delay-text {
+		font-size: 12px; font-weight: 300; color: #F2994A;
+		em { font-style: normal;  font-size: 16px; font-weight: 500; }
+	}
+
+		.add-btn {
+			margin-top: 1rem;
+		    background:url(/assets/add.png) no-repeat;
+		    background-size: 40px;
+		    cursor:pointer;
+		    border:none;
+		    width:43px;
+		    height:40px;
+		}
+}
+
+.name {
+	color: #FFF; font-weight: 400; font-size: 14px;
+	.time {
+		font-size: 12px; display: block;
+	}
+}
+
+.notify-green {
+	color: #8CEDB9;
+}
+
+
